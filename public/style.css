@@ -1,0 +1,369 @@
+
+/* Opći stilovi */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header i navigacija */
+header {
+    background: #17afca;
+    color: white;
+    padding: 5px;
+}
+
+header, footer {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header h1, footer p {
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+nav {
+    text-align: left;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+   
+}
+
+li.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #444;
+    padding: 10px 15px;
+    border-radius: 15px;
+    
+    margin-left: 0;
+}
+
+.nav-toggle {
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #222;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown-content li {
+    padding: 0;
+    text-align: left;
+}
+
+.dropdown-content li a,
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown-content li:hover {
+    background-color: #434242;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Tablica i slike */
+.table-img-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.img-cinema {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin:20px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+main {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Sekcije */
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox za podatke */
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Kružni grafikon */
+.pie-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #3498db 0% 40%,
+        #2ecc71 40% 75%,
+        #f1c40f 75% 100%
+    );
+    margin: 0 auto;
+}
+
+/* Analiza */
+.analysis-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.analysis-box {
+    background: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+/* Forma */
+.form-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+input, button {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: #17afca;
+    color: white;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .data-container,
+    .analysis-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-flex input,
+    .form-flex button {
+        width: 100%;
+    }
+
+    .table-img-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    .table-img-container table {
+        width: 100%;
+    }
+
+    .img-cinema {
+        width: 500px;
+        height: 400px;
+        
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        width: auto;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content li {
+        text-align: left;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1024px) {
+    .table-img-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .img-cinema {
+        width: 600px;
+        height: 450px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .dropdown-content {
+        position: absolute;
+    }
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+}
+
+thead {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+}
+
+thead th {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+tbody td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fb;
+}
+
+tbody tr:hover {
+    background-color: #eaf3ff;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td, th {
+    vertical-align: middle;
+}
+
+.table-container {
+    overflow-x: auto;
+    padding: 10px;
+}
